@@ -35,14 +35,14 @@ This repository contains data and notebook analyzes the relationship between tra
 - The panel dataframe is grouped by 'classification' to calculate descriptive statistics for each sentiment class (by_sent). These statistics include the number of unique accounts and days, median total PnL,  interquartile range of total PnL, median profit rate, median normalized trade PnL, median buy ratio, and median total trades.
 - Box plots are generated to visualize the distribution of 'total_pnl', 'profit_rate', and 'avg_trade_size' across the different sentiment classifications.
 
-![alt text](box_avg_trade_size_by_sentiment.png)
-
 # 5. Statistical Testing:
 - Kruskal–Wallis tests are performed on 'profit_rate' and 'total_pnl' to determine if there are statistically significant differences across the sentiment classifications.
 - Dunn's post-hoc tests with Bonferroni correction are conducted on 'profit_rate' and 'total_pnl' to identify which specific sentiment class pairs have statistically significant differences.
 
 # 6. Logistic Regression Analysis:
 A logistic regression model is built at the trade level to predict the probability of a profitable trade ('pnl_bin') based on 'sentiment_score', 'size_scaled', and 'side_binary'. The 'pnl_bin' column is recreated within this cell to ensure its availability.
+
+![alt text](box_avg_trade_size_by_sentiment.png)
 
 # 7. Market-Wide Aggregates and Participation:
 Market-wide aggregates per day are calculated from the merged dataframe, including unique accounts, total turnover (absolute sum of size), and total trades, grouped by 'trade_date' and 'classification'. The 'pnl' column is recreated within this cell for this aggregation.
