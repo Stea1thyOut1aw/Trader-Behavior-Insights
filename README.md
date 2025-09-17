@@ -48,7 +48,7 @@ A logistic regression model is built at the trade level to predict the probabili
 Market-wide aggregates per day are calculated from the merged dataframe, including unique accounts, total turnover (absolute sum of size), and total trades, grouped by 'trade_date' and 'classification'. The 'pnl' column is recreated within this cell for this aggregation.
 A line plot is generated to visualize the number of unique accounts participating each day, colored by the sentiment classification.
 
-![alt text](box_avg_trade_size_by_sentiment.pngline_unique_accounts_by_sentiment.png)
+![alt text](line_unique_accounts_by_sentiment.png)
 
 # 8. Data Export:
 The processed dataframes (merged, panel, and by_sent) are saved to CSV files for further use or analysis.
